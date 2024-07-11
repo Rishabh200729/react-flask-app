@@ -1,0 +1,29 @@
+.nav-bar{
+	background-color: #53B8BB;
+	color: white;
+	padding: 0.1em;
+}
+.nav-bar-brand{
+	font-size: 2em;
+	margin: 1em;
+	display: inline;
+}
+
+.list{
+	text-align: center;
+	list-style: none;
+}
+
+.item{
+	display: inline-block;
+	margin: 1em;
+}
+
+.item-button{
+	font-size: 1.5em;
+	padding: 0.4em 2em ;
+	background-color: #EEEEEE;
+	border:1px ;
+	border-radius: 5px;
+	cursor:pointer;
+}

@@ -1,0 +1,71 @@
+.my-class{
+	color:red;
+}
+.HomePage{
+	width: 95%;
+	margin: auto;
+	text-align: center;
+}
+
+.search{
+	margin: 1em auto;
+}
+
+.search >  input{
+	display: inline;
+	padding: 0.3em;
+	width: 50%;
+	height : 3%;
+	margin: 1em 0.1em;
+	font-size: 1.7em;
+	text-align: center;
+	outline: none;
+	border: 1px solid black;
+	border-radius: 5px;
+	border-color: rgb(10, 79, 78);
+}
+
+.search-btn{
+	cursor: pointer;
+	width: 10%;
+	padding:  0.66em 0 0.59em ;
+	font-size: 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #C9D8B6 ;
+}
+
+.search-btn:hover{
+	background-color: #F1ECC3;
+}
+
+.links{
+	text-align: center;
+}
+.link-button{
+	margin: 1em;
+	width: 30%;
+	padding: 0.79em;
+	font-size: 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #B8DFD8 ;
+}
+
+.link-button:hover{
+	background-color:#A2DBFA;
+}
+
+.trigger-modal{
+	margin: 1em;
+	width: 40%;
+	padding: 0.79em;
+	font-size: 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #50CB93 ;
+}
+
+.trigger-modal:hover{
+	background-color: #3eb489;
+}

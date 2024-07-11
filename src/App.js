@@ -1,24 +1,56 @@
-import logo from './logo.svg';
+import React,{ useState } from "react";
+//form react and react related packages
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+//my components
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
+import HomePage from "./components/userPages/HomePage";
+import HackathonView from "./components/userPages/HackathonView";
+//css
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    let jwtToken = "";
+    if(localStorage.getItem("token") !== null || localStorage.getItem("token") !== undefined){
+        jwtToken = localStorage.getItem("token");
+    }else{
+        jwtToken = "";
+    }
+    const [token, setToken] = useState(jwtToken);
+            
+return (
+    <Router>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={(props)=>{
+            return <HomePage {...props} token={token} />
+          }}
+        />
+      </Switch>
+      <Switch>
+        <Route 
+          exact 
+          path="/sign-up" 
+          render={(props) =>{
+            return <SignUp {...props} setToken={setToken} /> 
+          }}
+        />
+
+        <Route 
+          exact 
+          path="/login" 
+          render={(props) =>{
+            return <Login {...props} setToken={setToken} /> 
+          }}
+        />
+        </Switch>
+    </Router>
   );
 }
 
